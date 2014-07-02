@@ -1,18 +1,31 @@
 var inputText = null;
-var buttonConvert = null;
-var resultNum = null;
+var resultBin = null;
+var resultOct = null;
+var resultHex = null;
 
-window.onload = function(){
-  run();
+
+window.onload = function() {
+    inputText = document.querySelector('#txt'); // Need to check if #
+    resultBin = document.querySelector('#binaryResult');
+    resultOct = document.querySelector('#octalResult');
+    resultHex = document.querySelector('#hexadecimalResult');
 };
 
-function run() {
-    buttonConvert = document.querySelector('#buttonConvert');
-    inputText = document.querySelector('#txt'); // Need to check if #
-    resultNum = document.querySelector('#result');
-    buttonConvert.addEventListener("click", convertToBinary);
+var convertAll = function() {
+  convertToBinary();
+  convertToOct();
+  convertToHex();
 }
 
 var convertToBinary = function() {
-    resultNum.value = (Number(inputText.value)).toString(2); // 2 is the radix / base
+    resultBin.value = (Number(inputText.value)).toString(2); // 2 is the radix / base
+}
+
+
+var convertToOct = function() {
+    resultOct.value = (Number(inputText.value)).toString(8);
+}
+
+var convertToHex = function() {
+    resultHex.value = (Number(inputText.value)).toString(16);
 }
