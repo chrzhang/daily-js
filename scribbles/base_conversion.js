@@ -15,17 +15,17 @@ var convertAll = function() {
   convertToBinary();
   convertToOct();
   convertToHex();
-}
+};
 
 var convertToBinary = function() {
     resultBin.value = (Number(inputText.value)).toString(2); // 2 is the radix / base
-}
+};
 
 
 var convertToOct = function() {
     resultOct.value = (Number(inputText.value)).toString(8);
-}
+};
 
 var convertToHex = function() {
     resultHex.value = (Number(inputText.value)).toString(16);
-}
+};
