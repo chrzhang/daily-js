@@ -1,11 +1,19 @@
 <html>
     <body>
-        <pre>
-            <script src="base_conversion.js">
-            </script>
-        </pre>
-        <input id="txt" placeholder="Enter number"/>
-        <button id="buttonConvert">Convert to Binary</button>
-        <input id="result"/>
+        <script src="base_conversion.js">
+        </script>
+        <p>     
+            Decimal
+            <input id="txt" placeholder="Enter number" onkeyup="convertAll()"/>   
+        </p>
+        <p>
+            Binary <input id="binaryResult"/>
+        </p>
+        <p>
+            Octal <input id="octalResult" />  
+        </p>
+        <p>
+            Hexadecimal <input id="hexadecimalResult"/>
+        </p>
     </body>
 </html>
