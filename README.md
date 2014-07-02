@@ -1,4 +1,4 @@
 daily-js
 ========
 
-Daily JS scribblings.
+Inspired by [John Resig](http://ejohn.org/blog/write-code-every-day/)
