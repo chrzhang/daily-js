@@ -24,10 +24,14 @@ window.onload = function() {
       .append('div')// Add a div, AND change the current selection automatically
         .html('Appended to every section... hopefully');
     // Automatic bar-graph time
+    var x = d3.scale.linear() // For scaling using a mapping without magical #s
+        .domain([0, d3.max(data)])
+        .range([0, 420]);
     d3.selectAll(".chart") // Select the chart
       .selectAll('div') // Pick where data will be joined into
         .data(data) // Join the data
       .enter().append('div') // Know what happens when new data is 'enter'-ed
-        .style('width', function(d) { return d * 10 + "px"; }) // Set width
+        .style('width', function(d) { return x(d) + "px"; }) // Set width
         .text(function(d) {return d;}); // Set text label on the bar
 }
+
