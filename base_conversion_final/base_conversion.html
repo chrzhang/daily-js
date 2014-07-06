@@ -1,0 +1,27 @@
+<!doctype html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="base_conversion_style.css">
+        <script src="base_conversion.js">
+        </script>
+    </head>
+    <body>
+        <h1> Converting Numbers Between Bases </h1>
+
+        <p>     
+            <label>Decimal</label>
+            <input id="txt" placeholder="Enter digits [0-9]" onkeyup="convertAll()"/>   
+        </p>
+        <p>
+            <label>Binary</label>
+            <input id="binaryResult" placeholder="Enter digits [0-1]" onkeyup="convertNonBin()"/>
+        </p>
+        <p>
+            <label>Octal</label>
+            <input id="octalResult" placeholder="Enter digits [0-7]" onkeyup="convertNonOct()"/>  
+        </p>
+        <p>
+            <label>Hexadecimal</label>
+            <input id="hexadecimalResult" placeholder="Enter digits [0-F]" onkeyup="convertNonHex()"/>
+        </p>
+    </body>
+</html>

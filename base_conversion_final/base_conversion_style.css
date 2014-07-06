@@ -1,0 +1,36 @@
+body {
+    background-color: #B0C4DE;
+    font-family:"Palatino Linotype", Palatino, serif;
+    margin:50px;
+}
+
+h1 {
+    text-align:center;
+}
+
+input {
+    background-color: transparent;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-color: #ADD8E6;
+    outline: none;
+    text-align: right;
+}
+
+label, input {
+    display: inline-block;
+    font-family:"Palatino Linotype", Palatino, serif;
+    font-size:18px;
+}
+
+label {
+    width: 25%;
+    text-align: right;
+}
+
+label + input {
+    width: 50%;
+    margin: 0 2% 0 2%;
+}
+
