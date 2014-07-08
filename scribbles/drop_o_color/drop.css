@@ -1,0 +1,54 @@
+html, body {
+    margin: 0px;
+    height: 100%;
+}
+
+body {
+    background-color: black;
+}
+
+.f-c {
+    align-items: center;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.f-c-row {
+    width: auto;
+}
+
+input {
+    border: none;
+    font: 80px monospace;
+    margin: 10px;
+    outline: none;
+    padding: 20px;
+    text-align: center;
+    width: 8ch;
+    -webkit-text-stroke: 1px black;
+    color: white;
+    text-shadow:
+        3px 3px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+p {
+    text-align: center;
+    padding: 40px;
+    color: white;
+    font: 30px monospace;
+}
+
+input[type="text"] {
+    background: transparent;
+}
