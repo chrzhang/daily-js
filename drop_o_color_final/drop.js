@@ -75,7 +75,7 @@ function rapidChangeColors(e) {
 
 function randomize() {
     body.style.backgroundColor = inputBox.value = "#" + 
-        ( (1 << 24) * Math.random() | 0).toString(16);
+        ('00000' + ((1 << 24) * Math.random() | 0).toString(16)).substr(-6);
     counter = makeHexOutta(inputBox.value);
 }
 
