@@ -33,6 +33,7 @@ function addToCounter(amount) {
 }
 
 function updateColors(counter) {
+    body.classList.add('changeCol');
     body.style.backgroundColor = inputBox.value = makeColorStringOutta(counter);
 }
 
@@ -41,6 +42,7 @@ function makeColorStringOutta(number) {
 }
 
 function makeHexOutta(colorStr) {
+    if (colorStr.length !== 7) return;
     return parseInt('0x' + colorStr.substr(1));
 }
 
@@ -74,12 +76,13 @@ function rapidChangeColors(e) {
 }
 
 function randomize() {
-    body.style.backgroundColor = inputBox.value = "#" + 
+    var someRandomColorStr = "#" + 
         ('00000' + ((1 << 24) * Math.random() | 0).toString(16)).substr(-6);
-    counter = makeHexOutta(inputBox.value);
+    counter = makeHexOutta(someRandomColorStr);
+    updateColors(counter);
 }
 
 function updateOnUserIn() {
-    body.style.backgroundColor = inputBox.value;
     counter = makeHexOutta(inputBox.value);
+    updateColors(counter);
 }
