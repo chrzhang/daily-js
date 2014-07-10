@@ -1,15 +1,31 @@
 body {
+    background-color: Snow;
     text-align: center;
+}
+
+.demo {
+    background:blue;
+    margin: 15px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    /* ...and now for the proper property */
+    transition:.5s;
+}
+
+.demo:hover {
+    opacity: 0.4;
 }
 
 #fancy-button {
     background: gold;
-    display:block;
     color: black;
+    display:block;
     font: 30px sans-serif;
-    padding: 2px;
-    margin:3px;
     height:40px;
-    text-decoration: none;
+    margin:3px;
+    padding: 2px;
     text-align:center;
+    text-decoration: none;
 }

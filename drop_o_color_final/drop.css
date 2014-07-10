@@ -7,6 +7,14 @@ body {
     background-color: black;
 }
 
+body.changeCol {
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+}
+
 .f-c {
     align-items: center;
     display: -moz-box;
