@@ -1,5 +1,6 @@
 var body = null,
-    inputBox = null;
+    inputBox = null,
+    colorHistory = [];
 
 var counter = 0;
 
@@ -32,9 +33,11 @@ function addToCounter(amount) {
     counter = Math.min(Math.max(parseInt(counter), 0), 0xFFFFFF);
 }
 
-function updateColors(counter) {
+function updateColors(counter, restoreOld) {
     body.classList.add('changeCol');
     body.style.backgroundColor = inputBox.value = makeColorStringOutta(counter);
+    if (!restoreOld)
+        colorHistory.push(counter);
 }
 
 function makeColorStringOutta(number) {
@@ -62,15 +65,16 @@ function rapidChangeColors(e) {
     e = e || window.event;
     switch (e.keyCode) {
         case 39: // Right
-            console.log('incrementing...');
             incrementColor();
             break;
         case 37: // Left
-            console.log('decrementing...');
             decrementColor();
             break;
         case 40: // Down
             randomize();
+            break;
+        case 38: // Up
+            restoreLastColor();
             break;
     }
 }
@@ -85,4 +89,13 @@ function randomize() {
 function updateOnUserIn() {
     counter = makeHexOutta(inputBox.value);
     updateColors(counter);
+}
+
+function restoreLastColor() {
+    colorHistory.pop();
+    if (colorHistory.length === 0) {
+        return;
+    } else {
+        updateColors(colorHistory[colorHistory.length - 1], true);
+    }
 }
